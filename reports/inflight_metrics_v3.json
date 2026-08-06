@@ -1,0 +1,93 @@
+{
+  "protocol": "wall-clock split at T; as-of-checkpoint team prior; exact validity rule; project-clustered bootstrap",
+  "decision_date": "2023-12-21",
+  "rows_valid": 37546,
+  "rows_excluded": 3688,
+  "train_rows": 21612,
+  "test_rows": 11215,
+  "test_floor": 0.364,
+  "results": [
+    {
+      "model": "B0 prevalence floor",
+      "PR_AUC": 0.364,
+      "ROC_AUC": 0.5,
+      "Brier": 0.241,
+      "F1": 0.0
+    },
+    {
+      "model": "B1 ex-ante (size + as-of team history)",
+      "PR_AUC": 0.477,
+      "ROC_AUC": 0.631,
+      "Brier": 0.229,
+      "F1": 0.463
+    },
+    {
+      "model": "B2 behaviour only (declaration stream)",
+      "PR_AUC": 0.466,
+      "ROC_AUC": 0.619,
+      "Brier": 0.236,
+      "F1": 0.486
+    },
+    {
+      "model": "B3 FULL (ex-ante + behaviour)",
+      "PR_AUC": 0.52,
+      "ROC_AUC": 0.676,
+      "Brier": 0.216,
+      "F1": 0.491
+    }
+  ],
+  "calibrated": {
+    "model": "B3 + isotonic calibration",
+    "PR_AUC": 0.508,
+    "ROC_AUC": 0.665,
+    "Brier": 0.216,
+    "F1": 0.339
+  },
+  "calibration_bias": -0.024,
+  "full_ci": [
+    0.496,
+    0.548
+  ],
+  "behaviour_ci": [
+    0.445,
+    0.491
+  ],
+  "behaviour_increment": 0.043,
+  "lift": 1.43,
+  "per_checkpoint": {
+    "0.25": {
+      "n": 4405,
+      "floor": 0.298,
+      "PR_AUC": 0.436,
+      "lift": 1.46,
+      "PR_AUC_behaviour": 0.36
+    },
+    "0.5": {
+      "n": 3823,
+      "floor": 0.364,
+      "PR_AUC": 0.496,
+      "lift": 1.36,
+      "PR_AUC_behaviour": 0.434
+    },
+    "0.75": {
+      "n": 2987,
+      "floor": 0.46,
+      "PR_AUC": 0.603,
+      "lift": 1.31,
+      "PR_AUC_behaviour": 0.553
+    }
+  },
+  "behaviour_share_of_shap": 0.424,
+  "top_shap": {
+    "team_prior_n": 0.4416,
+    "team_prior_overrun": 0.4059,
+    "log_planned": 0.2778,
+    "checkpoint": 0.2035,
+    "hours_per_active_day": 0.1455,
+    "span_days": 0.1415,
+    "max_decl_hours": 0.1061,
+    "top_user_share": 0.0924,
+    "hours_at_cp": 0.063,
+    "decl_per_active_day": 0.0622
+  }
+}
