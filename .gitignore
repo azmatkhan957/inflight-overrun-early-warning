@@ -1,0 +1,14 @@
+# Raw and derived data are not redistributed here.
+# The Gryzzly dataset is openly licensed (CC BY 4.0) and must be downloaded from figshare;
+# see README for the DOI and the commands that regenerate everything below.
+data/
+*.csv
+*.parquet
+
+# environment / OS
+__pycache__/
+*.pyc
+.venv/
+venv/
+.DS_Store
+.env
