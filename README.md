@@ -102,7 +102,10 @@ reports/     metrics produced by the pipeline
 figures/     figures used in the dissertation
 ```
 
-## Licence
+## Use of this code
 
-Code released under the MIT Licence. The Gryzzly dataset is the work of its authors and is
-licensed CC BY 4.0; see `CITATION.md`.
+This repository accompanies an MSc dissertation submitted to the University of the West of
+Scotland and is published so the work can be read and verified. No licence is granted, so all
+rights are reserved by the authors; please get in touch before reusing the code.
+
+The Gryzzly dataset is the work of its authors and is licensed CC BY 4.0; see `CITATION.md`.
